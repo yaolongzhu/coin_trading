@@ -8,6 +8,10 @@ import urllib.parse
 import urllib.request
 import requests
 
+import logging
+
+logger = logging.getLogger("main.HuobiServices.Utils")
+
 
 # 此处填写APIKEY
 
@@ -42,8 +46,7 @@ def http_get_request(url, params, add_to_headers=None):
         else:
             return
     except BaseException as e:
-        #print("httpGet failed, detail is:%s,%s" %(response.text,e))
-        print("httpGet failed")
+        logger.info('Error while requesting %s ' % url)
         return
 
 

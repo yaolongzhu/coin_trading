@@ -1,11 +1,7 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Date    : 2017-12-20 15:40:03
-# @Author  : KlausQiu
-# @QQ      : 375235513
-# @github  : https://github.com/KlausQIU
-
 from huobi.Utils import *
+import logging
+
+logger = logging.getLogger("main.HuobiServices")
 
 '''
 Market data API
@@ -96,6 +92,9 @@ def get_detail(symbol):
 
 # 获取  支持的交易对
 def get_symbols(long_polling=None):
+
+    logger.info("Get symbos")
+
     """
 
     """
